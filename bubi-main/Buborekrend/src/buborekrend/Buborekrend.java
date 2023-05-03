@@ -11,6 +11,10 @@ public class Buborekrend {
     public static void main(String[] args) {
         int[] tomb = randomTomb(10);
         Buborek(tomb);
+        boolean vart = true;
+        boolean kapott = Teszteles(tomb);
+        assert vart == kapott : "nem jo!";
+        Teszteles(tomb);
     }
 
     private static void Buborek(int[] tomb) {
@@ -43,6 +47,17 @@ public class Buborekrend {
         }
         
         return tomb;
+    }
+    public static boolean Teszteles(int[] tomb) {
+
+        int n = tomb.length;
+        int i = 0;
+        int ker = tomb[i];
+        while (i < n && tomb[i] != ker) {
+            i++;
+        }
+        
+        return true;
     }
         
     }
